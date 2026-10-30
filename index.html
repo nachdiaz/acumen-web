@@ -5,7 +5,8 @@
 <title>Home Ácumen</title>
 <script src="./vendor/react.js"></script>
 <script src="./vendor/react-dom.js"></script>
-<script src="./support.js"></script>
+<script src="./support.js"></script>.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <x-dc>
@@ -16,7 +17,7 @@
 <style>
 body{margin:0;background:#0A0E1A}
 a{color:inherit;text-decoration:none}
-.c{max-width:1200px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.c{width:100%;max-width:none;margin:0;padding:0 clamp(24px,5vw,96px);box-sizing:border-box}
 .mono{font-family:"JetBrains Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
 .btn-amber{display:inline-flex;align-items:center;gap:10px;background:#F2A007;color:#0A0E1A;font:700 16px/1 Montserrat,sans-serif;padding:18px 28px;border-radius:999px;border:0;cursor:pointer;min-height:44px;box-sizing:border-box;transition:background .2s,transform .2s}
 .btn-amber:hover{background:#FFB52E;transform:translateY(-2px)}
@@ -31,7 +32,6 @@ a{color:inherit;text-decoration:none}
 .lbl{display:block;font:700 13px/1 Montserrat,sans-serif;color:#C9D8EE;margin-bottom:8px}
 @keyframes pulse{0%,100%{opacity:.25;transform:scale(1)}50%{opacity:.7;transform:scale(1.12)}}
 .pulse{animation:pulse 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-@media (prefers-reduced-motion:reduce){.pulse{animation:none}.lift,.btn-amber,.btn-ghost{transition:none}}
 #hero > *{position:relative;z-index:1}
 #hero > .grid-hot{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .45s ease;background-image:linear-gradient(rgba(61,214,255,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(61,214,255,.6) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(230px circle at var(--mx,50%) var(--my,50%),#000 0,rgba(0,0,0,.35) 55%,transparent 100%);mask-image:radial-gradient(230px circle at var(--mx,50%) var(--my,50%),#000 0,rgba(0,0,0,.35) 55%,transparent 100%)}
 #hero > .grid-hot::after{content:"";position:absolute;inset:0;background:radial-gradient(200px circle at var(--mx,50%) var(--my,50%),rgba(61,214,255,.35),transparent 70%)}
@@ -44,16 +44,58 @@ a{color:inherit;text-decoration:none}
 .ind:hover .ico{transform:rotate(-6deg) scale(1.08)}
 .ind .t{flex:1;font:700 19px/1.2 Montserrat,sans-serif;color:#0A0E1A}
 .ind .n{font:500 12px/1 "JetBrains Mono",monospace;color:#003C90;letter-spacing:.08em}
-@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.marq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
-.marq-track{display:flex;width:max-content;animation:marq 48s linear infinite}
-.marq-track.rev{animation-direction:reverse}
-.marq:hover .marq-track{animation-play-state:paused}
-.marq-group{display:flex;gap:16px;padding-right:16px;flex:none}
-.tile{flex:none;width:210px;height:92px;box-sizing:border-box;padding:12px 20px;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:16px;background:#EEF2F7;color:#152943;font:700 18px/1.15 Montserrat,sans-serif}
-.tile.ph{background:rgba(255,255,255,.04);border:1px dashed rgba(147,178,220,.4);color:#8FB0DE;font:500 12px/1.3 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
-@media (prefers-reduced-motion:reduce){.marq-track{animation:none}.marq{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.rv0{opacity:1;transform:none;transition:none}}
-@media (max-width:640px){.c{padding:0 20px}.nav .links{display:none!important}.tile{width:170px;height:80px}}
+
+/* ---------- Centros ---------- */
+.cc{display:flex;flex-direction:column;gap:20px;padding:34px;border-radius:24px;border:1px solid rgba(147,178,220,.2);background:linear-gradient(160deg,rgba(30,107,255,.16),rgba(21,41,67,.35) 60%)}
+.svc{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.svc li{display:flex;gap:12px;align-items:flex-start}
+.svc li::before{content:"";flex:none;width:7px;height:7px;margin-top:8px;background:#3DD6FF;transform:rotate(45deg)}
+.svc .st{display:block;font:600 15.5px/1.3 Montserrat,sans-serif;color:#fff}
+.svc .sd{display:block;margin-top:3px;font:400 14.5px/1.45 Lato,sans-serif;color:#9DB6DB}
+.gob{justify-content:center;align-items:center;text-align:center;border:1px dashed rgba(147,178,220,.22);background:transparent;min-height:200px}
+.gob-in{opacity:.42;transition:opacity .35s;max-width:320px}
+.gob:hover .gob-in,.gob:focus-visible .gob-in{opacity:1}
+.cta-line{display:block;text-align:center;margin-top:44px}
+
+/* ---------- Método ---------- */
+.mt-grid{display:grid;grid-template-columns:repeat(5,1fr);margin-top:72px}
+.mt-step{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px}
+.mt-circle{position:relative;flex:none;width:104px;height:104px;border-radius:50%;box-sizing:border-box;border:2px solid rgba(61,214,255,.5);background:radial-gradient(circle at 35% 30%,#1E6BFF,#0A2A7A 70%);display:flex;align-items:center;justify-content:center;font:800 30px/1 Montserrat,sans-serif;color:#fff;animation:mtglow 5.4s ease-out infinite;transition:transform .3s}
+.mt-circle:hover{transform:scale(1.08)}
+.mt-circle::before{content:"";position:absolute;inset:-12px;border-radius:50%;border:1.5px dashed rgba(61,214,255,.4);animation:mtspin 26s linear infinite}
+.mt-txt{margin-top:26px}
+.mt-txt h3{margin:0 0 10px;font:700 21px/1.15 Montserrat,sans-serif;color:#fff}
+.mt-txt p{margin:0;color:#B7C9E4;font-size:15.5px}
+.mt-link{position:absolute;top:51px;left:calc(50% + 66px);width:calc(100% - 132px);height:2px;background:rgba(61,214,255,.25);overflow:hidden}
+.mt-beam{position:absolute;top:-1px;left:0;height:4px;width:45%;background:linear-gradient(90deg,transparent,#3DD6FF,transparent);transform:translateX(-100%);opacity:0;animation:mtbeam 5.4s linear infinite}
+@keyframes mtglow{0%{box-shadow:0 0 0 0 rgba(61,214,255,.65);border-color:#3DD6FF}16%{box-shadow:0 0 0 22px rgba(61,214,255,0);border-color:#3DD6FF}28%,100%{box-shadow:0 0 0 0 rgba(61,214,255,0);border-color:rgba(61,214,255,.5)}}
+@keyframes mtspin{to{transform:rotate(360deg)}}
+@keyframes mtbeam{0%{transform:translateX(-100%);opacity:0}2%{opacity:1}16%{transform:translateX(230%);opacity:1}18%,100%{transform:translateX(230%);opacity:0}}
+@keyframes mtbeamv{0%{transform:translateY(-100%);opacity:0}2%{opacity:1}16%{transform:translateY(230%);opacity:1}18%,100%{transform:translateY(230%);opacity:0}}
+@media (max-width:900px){
+  .mt-grid{grid-template-columns:1fr;margin-top:48px}
+  .mt-step{flex-direction:row;align-items:flex-start;text-align:left;gap:24px;padding:0 0 40px}
+  .mt-step:last-child{padding-bottom:0}
+  .mt-txt{margin-top:8px}
+  .mt-link{top:116px;left:51px;width:2px;height:calc(100% - 128px)}
+  .mt-beam{top:0;left:-1px;width:4px;height:45%;background:linear-gradient(180deg,transparent,#3DD6FF,transparent);transform:translateY(-100%);animation-name:mtbeamv}
+}
+
+/* ---------- Panal (hexágonos) ---------- */
+.hex{flex:none;box-sizing:border-box;padding:2px;background:rgba(61,214,255,.5);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);transition:transform .25s,background .25s}
+.hex:hover{background:#3DD6FF;transform:translateY(-4px) scale(1.04)}
+.hex-in{width:100%;height:100%;box-sizing:border-box;padding:0 15%;display:flex;align-items:center;justify-content:center;text-align:center;background:#EEF2F7;color:#152943;font:700 17px/1.15 Montserrat,sans-serif;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.hex-in img{max-width:100%;max-height:44%;object-fit:contain}
+.hex-ph{background:rgba(147,178,220,.35)}
+.hex-ph .hex-in{background:#0D1426;color:#8FB0DE;font:500 11px/1.3 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.hex-ph .hex-in img{filter:none}
+
+@media (prefers-reduced-motion:reduce){
+  .pulse,.mt-circle,.mt-circle::before,.mt-beam{animation:none}
+  .lift,.btn-amber,.btn-ghost,.hex{transition:none}
+  .rv0{opacity:1;transform:none;transition:none}
+}
+@media (max-width:640px){.c{padding:0 20px}.nav .links{display:none!important}.hex-in{font-size:14px}.cc{padding:26px}}
 </style>
 </helmet>
 
@@ -126,70 +168,107 @@ a{color:inherit;text-decoration:none}
       </svg>
     </div>
   </div>
-
-  <div style="border-top:1px solid rgba(147,178,220,.16);background:rgba(10,14,26,.55)">
-    <div class="c" style="display:flex;flex-wrap:wrap;gap:12px 40px;align-items:center;justify-content:space-between;padding-top:26px;padding-bottom:26px">
-      <span class="mono" style="font-size:12px;color:#7F9BC4">Una sola plataforma de integración</span>
-      <span style="display:flex;flex-wrap:wrap;gap:12px 32px;font:600 15px/1 Montserrat,sans-serif;color:#C9D8EE">
-        <span>+30 años de experiencia</span><span>+2000 proyectos</span><span>+200 certificaciones</span><span>+35 alianzas</span>
-      </span>
-    </div>
-  </div>
 </header>
 
 <!-- ============ CENTROS ============ -->
 <section id="centros" style="padding:120px 0 40px">
   <div class="c">
-    <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Centros de especialización</p>
-    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:760px">Cuatro áreas. Una sola forma de trabajar.</h2>
-    <p style="margin:18px 0 0;color:#B7C9E4;max-width:640px">Elige el centro que se parece a tu necesidad. Cada uno reúne soluciones concretas, con método y entregables definidos.</p>
+    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:760px">Cinco centros de especialización.<br/> Una sola forma de trabajar.</h2>
+    <p style="margin:18px 0 0;color:#B7C9E4;max-width:640px">Integramos tus plataformas, resolvemos tus problemas, atacamos tus necesidades.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:24px;margin-top:56px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px;margin-top:56px">
 
-      <a href="#soluciones" class="lift" data-rv="" style="display:flex;flex-direction:column;gap:20px;padding:34px;border-radius:24px;border:1px solid rgba(147,178,220,.2);background:linear-gradient(160deg,rgba(30,107,255,.16),rgba(21,41,67,.35) 60%)">
+      <!-- 01 Redes -->
+      <div class="cc lift" data-rv="">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <span style="width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#3DD6FF,#1E6BFF);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.2"></circle><circle cx="5" cy="18" r="2.2"></circle><circle cx="19" cy="18" r="2.2"></circle><path d="M11 7 6 16M13 7l5 9M7.3 18h9.4"></path></svg></span>
           <span class="mono" style="font-size:12px;color:#7F9BC4">01</span>
         </div>
         <h3 style="margin:0;font:700 26px/1.15 Montserrat,sans-serif;color:#fff">Redes y Comunicaciones</h3>
-        <p style="margin:0;color:#B7C9E4">Conmutación, voz, redes inalámbricas y cableado estructurado.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="padding:7px 14px;border-radius:999px;background:rgba(61,214,255,.12);color:#8EE6FF;font:600 13px/1 Montserrat,sans-serif">Opera</span><span style="padding:7px 14px;border-radius:999px;background:rgba(61,214,255,.12);color:#8EE6FF;font:600 13px/1 Montserrat,sans-serif">Enlaza</span><span style="padding:7px 14px;border-radius:999px;border:1px dashed rgba(242,160,7,.6);color:#F7BE52;font:600 13px/1 Montserrat,sans-serif">Enlaza aaS · pronto</span></div>
-        <span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif">Entrar al centro <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-      </a>
+        <ul class="svc">
+          <li><span><span class="st">Redes empresariales</span><span class="sd">LAN, WAN, WLAN</span></span></li>
+          <li><span><span class="st">Nube empresarial</span><span class="sd">Privada, pública e híbrida</span></span></li>
+          <li><span><span class="st">Conectividad inalámbrica</span><span class="sd">Wifi residencial y de alta densidad</span></span></li>
+          <li><span><span class="st">Infraestructura de red</span><span class="sd">Cableado estructurado y equipos</span></span></li>
+          <li><span><span class="st">Monitoreo y gestión de la red</span><span class="sd">Rendimiento, disponibilidad, alertas y gestión centralizada</span></span></li>
+          <li><span><span class="st">Comunicaciones Unificadas</span><span class="sd">Telefonía IP, videoconferencia y herramientas de colaboración</span></span></li>
+        </ul>
+        <a href="#soluciones" style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif;min-height:44px">Entrar al centro <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
 
-      <a href="#soluciones" class="lift" data-rv="" style="display:flex;flex-direction:column;gap:20px;padding:34px;border-radius:24px;border:1px solid rgba(147,178,220,.2);background:linear-gradient(160deg,rgba(30,107,255,.16),rgba(21,41,67,.35) 60%)">
+      <!-- 02 Espacios Inteligentes -->
+      <div class="cc lift" data-rv="">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <span style="width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#3DD6FF,#1E6BFF);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"></rect><path d="M9 7.5h2M13 7.5h2M9 12h2M13 12h2M10.5 21v-4h3v4"></path></svg></span>
           <span class="mono" style="font-size:12px;color:#7F9BC4">02</span>
         </div>
         <h3 style="margin:0;font:700 26px/1.15 Montserrat,sans-serif;color:#fff">Espacios Inteligentes</h3>
-        <p style="margin:0;color:#B7C9E4">Seguridad, detección y automatización de edificios.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="padding:7px 14px;border-radius:999px;background:rgba(61,214,255,.12);color:#8EE6FF;font:600 13px/1 Montserrat,sans-serif">Detecta</span><span style="padding:7px 14px;border-radius:999px;background:rgba(61,214,255,.12);color:#8EE6FF;font:600 13px/1 Montserrat,sans-serif">Vigila</span><span style="padding:7px 14px;border-radius:999px;background:rgba(61,214,255,.12);color:#8EE6FF;font:600 13px/1 Montserrat,sans-serif">Accede</span><span style="padding:7px 14px;border-radius:999px;border:1px dashed rgba(242,160,7,.6);color:#F7BE52;font:600 13px/1 Montserrat,sans-serif">Vigila Enterprise · pronto</span></div>
-        <span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif">Entrar al centro <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-      </a>
+        <ul class="svc">
+          <li><span><span class="st">Sistemas de gestión de edificios (BMS)</span></span></li>
+          <li><span><span class="st">Detección y alarma contra incendios</span><span class="sd">NFS2-3030, NFS2-640, NFS-320</span></span></li>
+          <li><span><span class="st">Videovigilancia (CCTV)</span><span class="sd">Centro de monitoreo único</span></span></li>
+          <li><span><span class="st">Control de acceso</span><span class="sd">Vehicular y peatonal</span></span></li>
+          <li><span><span class="st">Integración y automatización de edificios</span><span class="sd">Climatización, elevadores, iluminación y otros sistemas</span></span></li>
+        </ul>
+        <a href="#soluciones" style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif;min-height:44px">Entrar al centro <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
 
-      <a href="#contacto" class="lift" data-rv="" style="display:flex;flex-direction:column;gap:20px;padding:34px;border-radius:24px;border:1px solid rgba(147,178,220,.2);background:linear-gradient(160deg,rgba(30,107,255,.16),rgba(21,41,67,.35) 60%)">
+      <!-- 03 Desarrollo -->
+      <div class="cc lift" data-rv="">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <span style="width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#3DD6FF,#1E6BFF);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7 3 12l5 5M16 7l5 5-5 5M14 4.5 10 19.5"></path></svg></span>
           <span class="mono" style="font-size:12px;color:#7F9BC4">03</span>
         </div>
-        <h3 style="margin:0;font:700 26px/1.15 Montserrat,sans-serif;color:#fff">Desarrollo</h3>
-        <p style="margin:0;color:#B7C9E4">Software a la medida e inteligencia artificial aplicada a tu operación.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="padding:7px 14px;border-radius:999px;border:1px dashed rgba(147,178,220,.5);color:#9DB6DB;font:600 13px/1 Montserrat,sans-serif">Soluciones en preparación</span></div>
-        <span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif">Hablar con un especialista <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-      </a>
+        <h3 style="margin:0;font:700 26px/1.15 Montserrat,sans-serif;color:#fff">Desarrollo y aplicaciones</h3>
+        <ul class="svc">
+          <li><span><span class="st">Integraciones y microservicios</span><span class="sd">PinPad, Scanner, Lector de cheques, Biométricos, etc.</span></span></li>
+          <li><span><span class="st">IA Conversacional aplicada al negocio</span><span class="sd">Cobranza, Atención a clientes, Soporte Técnico</span></span></li>
+          <li><span><span class="st">Procesamiento inteligente de documentos</span><span class="sd">Digitalización, lectura y procesamiento automático de documentos físicos o digitales</span></span></li>
+        </ul>
+        <a href="#contacto" style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif;min-height:44px">Hablar con un especialista <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
 
-      <a href="#contacto" class="lift" data-rv="" style="display:flex;flex-direction:column;gap:20px;padding:34px;border-radius:24px;border:1px solid rgba(147,178,220,.2);background:linear-gradient(160deg,rgba(30,107,255,.16),rgba(21,41,67,.35) 60%)">
+      <!-- 04 Ciberseguridad -->
+      <div class="cc lift" data-rv="">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <span style="width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#3DD6FF,#1E6BFF);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.2 8.3-7 10-3.8-1.7-7-5-7-10V6z"></path><path d="m9 12 2.2 2.2L15 10"></path></svg></span>
           <span class="mono" style="font-size:12px;color:#7F9BC4">04</span>
         </div>
         <h3 style="margin:0;font:700 26px/1.15 Montserrat,sans-serif;color:#fff">Ciberseguridad</h3>
-        <p style="margin:0;color:#B7C9E4">Protección de infraestructura, datos y continuidad de la operación.</p>
+        <ul class="svc">
+          <li><span><span class="st">Evaluación de exposición digital</span><span class="sd">Dominio empresarial, puertos y servicios</span></span></li>
+          <li><span><span class="st">Detección de exposición de información</span><span class="sd">Bases de datos, contraseñas, documentación confidencial</span></span></li>
+          <li><span><span class="st">Análisis de vulnerabilidades</span><span class="sd">Infraestructura de red y endpoints</span></span></li>
+          <li><span><span class="st">Seguridad en correo electrónico</span><span class="sd">Phishing, malware, suplantación de identidad</span></span></li>
+          <li><span><span class="st">Respaldos y protección de datos</span><span class="sd">Entornos físicos, virtuales, cloud; Recuperación ante desastres (DR); Ransomware</span></span></li>
+          <li><span><span class="st">Seguridad de redes empresariales</span><span class="sd">Firewalls, VPN, identidad de dispositivos y control de accesos en la red, prevención de intrusiones, filtrado web y DNS, protección en desarrollos y aplicaciones, protección en comunicaciones unificadas, monitoreo, correlación y alertamiento a incidentes de seguridad</span></span></li>
+        </ul>
+        <a href="#contacto" style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif;min-height:44px">Hablar con un especialista <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
+
+      <!-- 05 Infraestructura -->
+      <div class="cc lift" data-rv="">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <span style="width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#3DD6FF,#1E6BFF);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="1.5"></rect><rect x="3" y="14" width="18" height="6" rx="1.5"></rect><path d="M7 7h.01M7 17h.01M11 7h6M11 17h6"></path></svg></span>
+          <span class="mono" style="font-size:12px;color:#7F9BC4">05</span>
+        </div>
+        <h3 style="margin:0;font:700 26px/1.15 Montserrat,sans-serif;color:#fff">Infraestructura</h3>
+        <p style="margin:0;color:#B7C9E4">La base física que sostiene la operación de tu tecnología.</p>
         <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="padding:7px 14px;border-radius:999px;border:1px dashed rgba(147,178,220,.5);color:#9DB6DB;font:600 13px/1 Montserrat,sans-serif">Soluciones en preparación</span></div>
-        <span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif">Hablar con un especialista <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+        <a href="#contacto" style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif;min-height:44px">Hablar con un especialista <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
+
+      <!-- Gobierno (discreto) -->
+      <a href="#contacto" class="cc gob lift" data-rv="" aria-label="Gobierno: comunícate con nosotros">
+        <div class="gob-in">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB0DE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom:12px"><path d="M5 21V4M5 4h11l-2 3.5L16 11H5"></path></svg>
+          <p style="margin:0;font:700 18px/1.3 Montserrat,sans-serif;color:#fff">¿Eres de gobierno?</p>
+          <p style="margin:8px 0 0;font-size:15.5px;color:#B7C9E4">Comunícate con nosotros, tenemos soluciones para ti.</p>
+        </div>
       </a>
     </div>
+
+    <p class="mono cta-line" data-rv="" style="margin-bottom:0;font-size:12px;color:#7F9BC4">Diseño · Implementación · Integración · Soporte · Mantenimiento · Suministro</p>
   </div>
 </section>
 
@@ -221,18 +300,20 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============ MÉTODO ============ -->
-<section style="padding:110px 0;background:#0F1A2E;border-top:1px solid rgba(147,178,220,.12);border-bottom:1px solid rgba(147,178,220,.12)">
+<section style="padding:110px 0 120px;background:#0F1A2E;border-top:1px solid rgba(147,178,220,.12);border-bottom:1px solid rgba(147,178,220,.12)">
   <div class="c">
-    <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Método</p>
+    <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Metodología</p>
     <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:760px">Una solución no termina en una tecnología.</h2>
     <p style="margin:18px 0 0;color:#B7C9E4;max-width:620px">Cinco etapas, cada una con su entregable, desde entender el problema hasta mejorarlo de forma continua.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px;margin-top:60px">
+    <div class="mt-grid">
       <sc-for list="{{metodo}}" as="m" hint-placeholder-count="5">
-        <div data-rv="" style="position:relative;padding-top:28px;border-top:2px solid rgba(61,214,255,.5)">
-          <span style="position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:#3DD6FF;box-shadow:0 0 0 6px rgba(61,214,255,.18)"></span>
-          <span class="mono" style="font-size:13px;color:#3DD6FF">{{m.n}}</span>
-          <h3 style="margin:10px 0 10px;font:700 21px/1.15 Montserrat,sans-serif;color:#fff">{{m.t}}</h3>
-          <p style="margin:0;color:#B7C9E4;font-size:15.5px">{{m.d}}</p>
+        <div class="mt-step" data-rv="">
+          <sc-if value="{{m.hasNext}}" hint-placeholder-val="{{ true }}"><div class="mt-link" aria-hidden="true"><span class="mt-beam" style="animation-delay:{{m.dl}}s"></span></div></sc-if>
+          <div class="mt-circle" style="animation-delay:{{m.dc}}s">{{m.n}}</div>
+          <div class="mt-txt">
+            <h3>{{m.t}}</h3>
+            <p>{{m.d}}</p>
+          </div>
         </div>
       </sc-for>
     </div>
@@ -244,19 +325,14 @@ a{color:inherit;text-decoration:none}
   <div class="c">
     <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Clientes</p>
     <h2 data-rv="" style="margin:0;font:700 clamp(28px,3.2vw,40px)/1.1 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:700px">Impulsando a organizaciones líderes.</h2>
-    <div class="marq" style="margin-top:44px">
-      <div class="marq-track">
-        <div class="marq-group">
-          <sc-for list="{{clientes}}" as="p" hint-placeholder-count="10">
-            <div class="tile ph"><sc-if value="{{p.hasImg}}" hint-placeholder-val="{{ false }}"><img src="{{p.img}}" alt="{{p.n}}" style="max-width:150px;max-height:56px;object-fit:contain"></sc-if><sc-if value="{{p.noImg}}" hint-placeholder-val="{{ true }}"><span>{{p.n}}</span></sc-if></div>
+    <div style="margin-top:56px">
+      <sc-for list="{{clientesRows}}" as="r" hint-placeholder-count="2">
+        <div style="{{r.style}}">
+          <sc-for list="{{r.items}}" as="p" hint-placeholder-count="5">
+            <div class="hex hex-ph" style="{{hexStyle}}"><div class="hex-in"><sc-if value="{{p.hasImg}}" hint-placeholder-val="{{ false }}"><img src="{{p.img}}" alt="{{p.n}}"></sc-if><sc-if value="{{p.noImg}}" hint-placeholder-val="{{ true }}"><span>{{p.n}}</span></sc-if></div></div>
           </sc-for>
         </div>
-        <div class="marq-group" aria-hidden="true">
-          <sc-for list="{{clientes}}" as="p" hint-placeholder-count="10">
-            <div class="tile ph"><sc-if value="{{p.hasImg}}" hint-placeholder-val="{{ false }}"><img src="{{p.img}}" alt="" style="max-width:150px;max-height:56px;object-fit:contain"></sc-if><sc-if value="{{p.noImg}}" hint-placeholder-val="{{ true }}"><span>{{p.n}}</span></sc-if></div>
-          </sc-for>
-        </div>
-      </div>
+      </sc-for>
     </div>
   </div>
 </section>
@@ -316,7 +392,7 @@ a{color:inherit;text-decoration:none}
 <section id="porque" style="padding:120px 0;background-color:#0A4FE0;background-image:radial-gradient(700px 420px at 90% 0%,rgba(61,214,255,.45),rgba(61,214,255,0)),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(135deg,#0A3FC0,#1E6BFF);background-size:auto,56px 56px,56px 56px,auto;color:#fff">
   <div class="c">
     <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#fff;opacity:.85">Por qué Ácumen</p>
-    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;max-width:760px">Experiencia que se nota cuando el proyecto es complejo.</h2>
+    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;max-width:760px">Experiencia que se nota.</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:28px;margin-top:56px">
       <sc-for list="{{cifras}}" as="f" hint-placeholder-count="4">
         <div data-rv="" style="border-top:2px solid rgba(255,255,255,.55);padding-top:20px">
@@ -337,23 +413,18 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============ PARTNERS ============ -->
-<section style="padding:100px 0 40px">
+<section style="padding:100px 0 60px">
   <div class="c">
     <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Alianzas</p>
     <h2 data-rv="" style="margin:0;font:700 clamp(28px,3.2vw,40px)/1.1 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:700px">Los mejores aliados para cada solución.</h2>
-    <div class="marq" style="margin-top:44px">
-      <div class="marq-track rev">
-        <div class="marq-group">
-          <sc-for list="{{partners}}" as="p" hint-placeholder-count="9">
-            <div class="tile"><sc-if value="{{p.hasImg}}" hint-placeholder-val="{{ false }}"><img src="{{p.img}}" alt="{{p.n}}" style="max-width:150px;max-height:56px;object-fit:contain"></sc-if><sc-if value="{{p.noImg}}" hint-placeholder-val="{{ true }}"><span>{{p.n}}</span></sc-if></div>
+    <div style="margin-top:56px">
+      <sc-for list="{{partnersRows}}" as="r" hint-placeholder-count="2">
+        <div style="{{r.style}}">
+          <sc-for list="{{r.items}}" as="p" hint-placeholder-count="5">
+            <div class="hex" style="{{hexStyle}}"><div class="hex-in"><sc-if value="{{p.hasImg}}" hint-placeholder-val="{{ false }}"><img src="{{p.img}}" alt="{{p.n}}"></sc-if><sc-if value="{{p.noImg}}" hint-placeholder-val="{{ true }}"><span>{{p.n}}</span></sc-if></div></div>
           </sc-for>
         </div>
-        <div class="marq-group" aria-hidden="true">
-          <sc-for list="{{partners}}" as="p" hint-placeholder-count="9">
-            <div class="tile"><sc-if value="{{p.hasImg}}" hint-placeholder-val="{{ false }}"><img src="{{p.img}}" alt="" style="max-width:150px;max-height:56px;object-fit:contain"></sc-if><sc-if value="{{p.noImg}}" hint-placeholder-val="{{ true }}"><span>{{p.n}}</span></sc-if></div>
-          </sc-for>
-        </div>
-      </div>
+      </sc-for>
     </div>
   </div>
 </section>
@@ -400,7 +471,7 @@ a{color:inherit;text-decoration:none}
           <div><label class="lbl" for="f-tel">Teléfono (opcional)</label><input class="field" id="f-tel" type="tel" placeholder="55 0000 0000"></div>
         </div>
         <div><label class="lbl" for="f-centro">Centro de interés</label>
-          <select class="field" id="f-centro"><option>Redes y Comunicaciones</option><option>Espacios Inteligentes</option><option>Desarrollo</option><option>Ciberseguridad</option><option>Aún no lo sé</option></select></div>
+          <select class="field" id="f-centro"><option>Redes y Comunicaciones</option><option>Espacios Inteligentes</option><option>Desarrollo</option><option>Ciberseguridad</option><option>Infraestructura</option><option>Gobierno</option><option>Aún no lo sé</option></select></div>
         <div><label class="lbl" for="f-msg">¿Qué necesitas resolver?</label><textarea class="field" id="f-msg" rows="3" placeholder="Cuéntanos en pocas palabras"></textarea></div>
         <button type="button" class="btn-amber" style="justify-content:center">Agenda una reunión</button>
       </form>
@@ -423,7 +494,7 @@ a{color:inherit;text-decoration:none}
       <div style="display:flex;flex-wrap:wrap;gap:40px 64px">
         <div>
           <h4 class="mono" style="margin:0 0 16px;font-size:12px;color:#3DD6FF">Soluciones</h4>
-          <div style="display:flex;flex-direction:column;gap:6px;font-size:15.5px;color:#C9D8EE"><a href="#centros" style="padding:6px 0">Redes y Comunicaciones</a><a href="#centros" style="padding:6px 0">Espacios Inteligentes</a><a href="#centros" style="padding:6px 0">Desarrollo</a><a href="#centros" style="padding:6px 0">Ciberseguridad</a></div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:15.5px;color:#C9D8EE"><a href="#centros" style="padding:6px 0">Redes y Comunicaciones</a><a href="#centros" style="padding:6px 0">Espacios Inteligentes</a><a href="#centros" style="padding:6px 0">Desarrollo</a><a href="#centros" style="padding:6px 0">Ciberseguridad</a><a href="#centros" style="padding:6px 0">Infraestructura</a></div>
         </div>
         <div>
           <h4 class="mono" style="margin:0 0 16px;font-size:12px;color:#3DD6FF">Industrias</h4>
@@ -444,9 +515,18 @@ a{color:inherit;text-decoration:none}
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6400}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7200}}'>
 class Component extends DCLogic {
   componentDidMount() {
+    // Reacomoda el panal de hexágonos cuando cambia el ancho de la ventana
+    this._rs = () => {
+      cancelAnimationFrame(this._raf);
+      this._raf = requestAnimationFrame(() => {
+        const w = window.innerWidth;
+        if (w !== this.state.vw) this.setState({ vw: w });
+      });
+    };
+    window.addEventListener("resize", this._rs);
     try {
       const reduce = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
       // 1) Cuadrícula del hero que reacciona al mouse
@@ -505,6 +585,8 @@ class Component extends DCLogic {
   }
   componentWillUnmount() {
     try {
+      window.removeEventListener("resize", this._rs);
+      cancelAnimationFrame(this._raf);
       const hero = document.getElementById("hero");
       if (hero && this._mm) { hero.removeEventListener("mousemove", this._mm); hero.removeEventListener("mouseleave", this._ml); }
       if (this._io) this._io.disconnect();
@@ -514,7 +596,59 @@ class Component extends DCLogic {
   renderVals() {
     const logos = (arr) => arr.map((n) => ({ n, img: "", hasImg: false, noImg: true }));
     const S = (centro, nombre, desc, activa) => ({ centro, nombre, desc, activa, pronto: !activa, cta: activa ? "Ver solución" : "Avísame del lanzamiento" });
+
+    // ----- Panal: reparte los logos en filas alternadas de c y c-1 hexágonos -----
+    const vw = this.state.vw || window.innerWidth;
+    const small = vw <= 640;
+    const pad = small ? 20 : Math.min(96, Math.max(24, vw * 0.05));
+    const avail = vw - pad * 2;
+    const hw = small ? 132 : (vw <= 1100 ? 170 : 190);
+    const hh = Math.round(hw * 1.1547);
+    const gap = 10;
+    const pitch = hw + gap;
+    const cols = Math.max(2, Math.floor((avail + gap) / pitch));
+    const rowMargin = Math.round(-0.25 * hh + gap * 0.866);
+    const hexRows = (items) => {
+      const n = items.length;
+      let bestC = 2, bestScore = -1;
+      for (let c = 2; c <= Math.min(cols, Math.max(2, n - 1)); c++) {
+        let rem = n, i = 0, last = 1, rows = 0;
+        while (rem > 0) {
+          const exp = i % 2 === 0 ? c : c - 1;
+          const take = Math.min(exp, rem);
+          last = take / exp; rem -= take; i++; rows++;
+        }
+        const score = last - rows * 0.001;
+        if (score > bestScore) { bestScore = score; bestC = c; }
+      }
+      const c = bestC, W = c * pitch - gap;
+      const out = [];
+      let idx = 0, i = 0;
+      while (idx < n) {
+        const exp = i % 2 === 0 ? c : c - 1;
+        const take = Math.min(exp, n - idx);
+        const pl = (i % 2 ? pitch / 2 : 0) + Math.floor((exp - take) / 2) * pitch;
+        out.push({
+          items: items.slice(idx, idx + take),
+          style: "display:flex;gap:" + gap + "px;width:" + W + "px;max-width:100%;margin:" + (i ? rowMargin : 0) + "px auto 0;padding-left:" + pl + "px;box-sizing:border-box"
+        });
+        idx += take; i++;
+      }
+      return out;
+    };
+
+    const metodo = [
+      { n: "01", t: "Consultoría", d: "Entendemos tu operación y levantamos un diagnóstico inicial." },
+      { n: "02", t: "Diseño", d: "Definimos la arquitectura y una propuesta técnico-económica." },
+      { n: "03", t: "Implementación", d: "Ejecutamos con visitas y control de cambios." },
+      { n: "04", t: "Operación", d: "Damos seguimiento, registro y control de la operacion" },
+      { n: "05", t: "Evolución", d: "Medimos, dictaminamos y mejoramos de forma continua." }
+    ].map((m, k, a) => ({ ...m, hasNext: k < a.length - 1, dc: (k * 0.9).toFixed(1), dl: (k * 0.9 + 0.3).toFixed(1) }));
+
     return {
+      hexStyle: "width:" + hw + "px;height:" + hh + "px",
+      partnersRows: hexRows(logos(["HPE", "Alcatel", "ManageEngine", "Leviton", "Panduit", "Notifier", "Hikvision", "Fortinet", "Red Hat"])),
+      clientesRows: hexRows(logos(["[Logo cliente 1]", "[Logo cliente 2]", "[Logo cliente 3]", "[Logo cliente 4]", "[Logo cliente 5]", "[Logo cliente 6]", "[Logo cliente 7]", "[Logo cliente 8]", "[Logo cliente 9]", "[Logo cliente 10]"])),
       soluciones: [
         S("Redes y Comunicaciones", "Ácumen Opera", "Servicios de redes: diagnóstico inicial, visitas de servicio y control de cambios.", true),
         S("Redes y Comunicaciones", "Ácumen Enlaza", "Redes enterprise: levantamiento, diseño, obra y validación de entrega.", true),
@@ -524,15 +658,8 @@ class Component extends DCLogic {
         S("Espacios Inteligentes", "Ácumen Accede", "Mantenimiento de control de acceso vehicular.", true),
         S("Espacios Inteligentes", "Ácumen Vigila Enterprise", "CCTV enterprise.", false)
       ],
-      metodo: [
-        { n: "01", t: "Consultoría", d: "Entendemos tu operación y levantamos un diagnóstico inicial." },
-        { n: "02", t: "Diseño", d: "Definimos la arquitectura y una propuesta técnico-económica." },
-        { n: "03", t: "Implementación", d: "Ejecutamos con visitas y control de cambios." },
-        { n: "04", t: "Operación", d: "Damos mantenimiento y llevamos la bitácora." },
-        { n: "05", t: "Evolución", d: "Medimos, dictaminamos y mejoramos de forma continua." }
-      ],
+      metodo,
       casos: [{ nombre: "Estadio YU'VA", img:"../img/casos/yuva.jpg" }, { nombre: "Torre Aleph", img:"" }, { nombre: "Pueblo Bonito", img:"" }],
-      industrias: ["Banca", "Carriers", "Retail", "Industrial", "Hospitalidad", "Entretenimiento", "Salud", "Data centers", "Gobierno"].map((t, k) => ({ n: String(k + 1).padStart(2, "0"), t })),
       cifras: [
         { v: "+30", n: 30, l: "años de experiencia" },
         { v: "+2000", n: 2000, l: "proyectos completados" },
@@ -541,12 +668,10 @@ class Component extends DCLogic {
       ],
       difs: [
         { t: "Experiencia práctica", d: "Más de 30 años resolviendo operaciones reales." },
-        { t: "Un solo socio", d: "Coordinamos las distintas tecnologías de tu proyecto." },
+        { t: "Un solo socio", d: "Coordinamos las distintas tecnologías y proveedores de tu proyecto." },
         { t: "Equipo especializado", d: "Personas que entienden la complejidad de tu entorno." },
         { t: "Acompañamiento", d: "Seguimos contigo después de la implementación." }
       ],
-      partners: logos(["HPE", "Alcatel", "ManageEngine", "Leviton", "Panduit", "Notifier", "Hikvision", "Fortinet", "Red Hat"]),
-      clientes: logos(["[Logo cliente 1]", "[Logo cliente 2]", "[Logo cliente 3]", "[Logo cliente 4]", "[Logo cliente 5]", "[Logo cliente 6]", "[Logo cliente 7]", "[Logo cliente 8]", "[Logo cliente 9]", "[Logo cliente 10]"]),
       insights: [
         { tag: "Espacios inteligentes", t: "Edificios inteligentes: por dónde empezar" },
         { tag: "Ciberseguridad", t: "Cómo proteger la infraestructura crítica de tu operación" },
