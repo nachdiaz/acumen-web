@@ -5,7 +5,7 @@
 <title>Home Ácumen</title>
 <script src="./vendor/react.js"></script>
 <script src="./vendor/react-dom.js"></script>
-<script src="./support.js"></script>.
+<script src="./support.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -96,6 +96,25 @@ a{color:inherit;text-decoration:none}
   .rv0{opacity:1;transform:none;transition:none}
 }
 @media (max-width:640px){.c{padding:0 20px}.nav .links{display:none!important}.hex-in{font-size:14px}.cc{padding:26px}}
+
+/* ---------- Fondos alternados: azul oscuro / blanco / azul vibrante ---------- */
+.bg-blue{background-color:#0A4FE0;background-image:radial-gradient(700px 420px at 90% 0%,rgba(61,214,255,.45),rgba(61,214,255,0)),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(135deg,#0A3FC0,#1E6BFF);background-size:auto,56px 56px,56px 56px,auto;color:#fff}
+.sec-blue .eyebrow{color:#fff!important;opacity:.85}
+.sec-blue .hex{background:rgba(255,255,255,.55)}
+.sec-blue .hex:hover{background:#fff}
+.sec-light{background:#fff;color:#152943}
+.sec-light .eyebrow{color:#003C90!important}
+.sec-light h2{color:#0A0E1A!important}
+.sec-light .intro{color:#41587A!important}
+.sec-light .cc{background:linear-gradient(160deg,#12306F,#0A1530 70%);border-color:transparent}
+.sec-light .gob{background:transparent;border:1px dashed rgba(21,41,67,.3)}
+.sec-light .gob p{color:#152943!important}
+.sec-light .gob svg{stroke:#41587A}
+.sec-light .field{background:#F4F7FB;border-color:#C5D3E8;color:#152943}
+.sec-light .field:focus{border-color:#0A4FE0;outline-color:#0A4FE0}
+.sec-light .lbl{color:#152943}
+.sec-light .hex-ph{background:rgba(10,79,224,.35)}
+.sec-light .hex-ph .hex-in{background:#F1F5FB;color:#41587A}
 </style>
 </helmet>
 
@@ -171,10 +190,10 @@ a{color:inherit;text-decoration:none}
 </header>
 
 <!-- ============ CENTROS ============ -->
-<section id="centros" style="padding:120px 0 40px">
+<section id="centros" class="sec-light" style="padding:120px 0">
   <div class="c">
-    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:760px">Cinco centros de especialización.<br/> Una sola forma de trabajar.</h2>
-    <p style="margin:18px 0 0;color:#B7C9E4;max-width:640px">Integramos tus plataformas, resolvemos tus problemas, atacamos tus necesidades.</p>
+    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;">Cinco centros de especialización.<br/> Una sola forma de trabajar.</h2>
+    <p class="intro" style="margin:18px 0 0;color:#B7C9E4;max-width:640px">Integramos tus plataformas, resolvemos tus problemas, atacamos tus necesidades.</p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px;margin-top:56px">
 
@@ -254,7 +273,7 @@ a{color:inherit;text-decoration:none}
         </div>
         <h3 style="margin:0;font:700 26px/1.15 Montserrat,sans-serif;color:#fff">Infraestructura</h3>
         <p style="margin:0;color:#B7C9E4">La base física que sostiene la operación de tu tecnología.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="padding:7px 14px;border-radius:999px;border:1px dashed rgba(147,178,220,.5);color:#9DB6DB;font:600 13px/1 Montserrat,sans-serif">Soluciones en preparación</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px"></div>
         <a href="#contacto" style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif;min-height:44px">Hablar con un especialista <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
       </div>
 
@@ -262,23 +281,23 @@ a{color:inherit;text-decoration:none}
       <a href="#contacto" class="cc gob lift" data-rv="" aria-label="Gobierno: comunícate con nosotros">
         <div class="gob-in">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB0DE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom:12px"><path d="M5 21V4M5 4h11l-2 3.5L16 11H5"></path></svg>
-          <p style="margin:0;font:700 18px/1.3 Montserrat,sans-serif;color:#fff">¿Eres de gobierno?</p>
+          <p style="margin:0;font:700 18px/1.3 Montserrat,sans-serif;color:#fff">¿Gobierno?</p>
           <p style="margin:8px 0 0;font-size:15.5px;color:#B7C9E4">Comunícate con nosotros, tenemos soluciones para ti.</p>
         </div>
       </a>
     </div>
 
-    <p class="mono cta-line" data-rv="" style="margin-bottom:0;font-size:12px;color:#7F9BC4">Diseño · Implementación · Integración · Soporte · Mantenimiento · Suministro</p>
+    <p class="mono cta-line" data-rv="" style="margin-bottom:0;font-size:12px;color:#41587A">Diseño · Implementación · Integración · Soporte · Mantenimiento · Suministro</p>
   </div>
 </section>
 
 <!-- ============ SOLUCIONES ============ -->
-<section id="soluciones" style="padding:100px 0 120px">
+<section id="soluciones" class="bg-blue sec-blue" style="padding:110px 0">
   <div class="c">
     <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
       <div>
-        <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Soluciones</p>
-        <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:700px">Soluciones listas para pedir, con alcance claro.</h2>
+        <p class="mono eyebrow" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Soluciones</p>
+        <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;">Soluciones listas para pedir, con alcance claro.</h2>
       </div>
       <a class="btn-ghost" href="#contacto">Recibir una propuesta</a>
     </div>
@@ -287,8 +306,6 @@ a{color:inherit;text-decoration:none}
         <div class="lift" data-rv="" style="display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:20px;background:#111C30;border:1px solid rgba(147,178,220,.16)">
           <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
             <span class="mono" style="font-size:11.5px;color:#8FB0DE">{{s.centro}}</span>
-            <sc-if value="{{s.activa}}" hint-placeholder-val="{{ true }}"><span style="display:inline-flex;align-items:center;gap:8px;font:600 12.5px/1 Montserrat,sans-serif;color:#8EE6FF"><span style="width:8px;height:8px;border-radius:50%;background:#3DD6FF;display:inline-block"></span>Disponible</span></sc-if>
-            <sc-if value="{{s.pronto}}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:8px;font:600 12.5px/1 Montserrat,sans-serif;color:#F7BE52;border:1px solid rgba(242,160,7,.55);border-radius:999px;padding:6px 12px">22 oct · 12:00 h</span></sc-if>
           </div>
           <h3 style="margin:0;font:700 24px/1.15 Montserrat,sans-serif;color:#fff">{{s.nombre}}</h3>
           <p style="margin:0;color:#B7C9E4;font-size:16px">{{s.desc}}</p>
@@ -302,8 +319,8 @@ a{color:inherit;text-decoration:none}
 <!-- ============ MÉTODO ============ -->
 <section style="padding:110px 0 120px;background:#0F1A2E;border-top:1px solid rgba(147,178,220,.12);border-bottom:1px solid rgba(147,178,220,.12)">
   <div class="c">
-    <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Metodología</p>
-    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:760px">Una solución no termina en una tecnología.</h2>
+    <p class="mono eyebrow" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Metodología</p>
+    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;">Una solución no termina en una tecnología.</h2>
     <p style="margin:18px 0 0;color:#B7C9E4;max-width:620px">Cinco etapas, cada una con su entregable, desde entender el problema hasta mejorarlo de forma continua.</p>
     <div class="mt-grid">
       <sc-for list="{{metodo}}" as="m" hint-placeholder-count="5">
@@ -321,9 +338,9 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============ CLIENTES ============ -->
-<section style="padding:110px 0 100px">
+<section class="sec-light" style="padding:110px 0">
   <div class="c">
-    <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Clientes</p>
+    <p class="mono eyebrow" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Clientes</p>
     <h2 data-rv="" style="margin:0;font:700 clamp(28px,3.2vw,40px)/1.1 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:700px">Impulsando a organizaciones líderes.</h2>
     <div style="margin-top:56px">
       <sc-for list="{{clientesRows}}" as="r" hint-placeholder-count="2">
@@ -338,14 +355,14 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============ CASOS ============ -->
-<section id="casos" style="padding:120px 0;background:#EEF2F7;color:#152943">
+<section id="casos" class="bg-blue sec-blue" style="padding:120px 0">
   <div class="c">
     <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
       <div>
-        <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#003C90">Casos de éxito</p>
-        <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#0A0E1A;max-width:700px">Necesidades concretas. Resultados visibles.</h2>
+        <p class="mono eyebrow" data-rv="" style="margin:0 0 16px;font-size:13px;color:#003C90">Casos de éxito</p>
+        <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;max-width:700px;color:#fff">Necesidades concretas. Resultados visibles.</h2>
       </div>
-      <a href="#contacto" style="display:inline-flex;align-items:center;gap:8px;color:#003C90;font:700 15px/1 Montserrat,sans-serif;min-height:44px">Ver todos los casos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a href="#contacto" style="display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 15px/1 Montserrat,sans-serif;min-height:44px">Ver todos los casos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;margin-top:52px">
       <sc-for list="{{casos}}" as="k" hint-placeholder-count="3">
@@ -370,10 +387,10 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============ INDUSTRIAS ============ -->
-<section id="industrias" style="padding:110px 0;background:#fff;color:#152943">
+<section id="industrias" style="padding:110px 0;background:#0F1A2E;color:#EEF2F7">
   <div class="c">
-    <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#003C90">Industrias</p>
-    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#0A0E1A;max-width:760px">Tu sector tiene sus propios retos. Los conocemos.</h2>
+    <p class="mono eyebrow" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Industrias</p>
+    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;">Tu sector tiene sus propios retos. Los conocemos.</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin-top:48px">
       <a href="#contacto" class="lift ind" data-rv=""><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6"></path><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"></path></svg></span><span class="t">Banca</span><span class="n">01</span></a>
       <a href="#contacto" class="lift ind" data-rv=""><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12v9M8 21h8"></path><circle cx="12" cy="9" r="2"></circle><path d="M7.5 5.5a6.4 6.4 0 0 0 0 7M16.5 5.5a6.4 6.4 0 0 1 0 7"></path></svg></span><span class="t">Carriers</span><span class="n">02</span></a>
@@ -383,27 +400,26 @@ a{color:inherit;text-decoration:none}
       <a href="#contacto" class="lift ind" data-rv=""><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m10 9 5 3-5 3z"></path></svg></span><span class="t">Entretenimiento</span><span class="n">06</span></a>
       <a href="#contacto" class="lift ind" data-rv=""><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"></rect><path d="M12 8v8M8 12h8"></path></svg></span><span class="t">Salud</span><span class="n">07</span></a>
       <a href="#contacto" class="lift ind" data-rv=""><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="1.5"></rect><rect x="3" y="14" width="18" height="6" rx="1.5"></rect><path d="M7 7h.01M7 17h.01M11 7h6M11 17h6"></path></svg></span><span class="t">Data centers</span><span class="n">08</span></a>
-      <a href="#contacto" class="lift ind" data-rv=""><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 3.5L16 11H5"></path></svg></span><span class="t">Gobierno</span><span class="n">09</span></a>
     </div>
   </div>
 </section>
 
 <!-- ============ POR QUÉ ÁCUMEN ============ -->
-<section id="porque" style="padding:120px 0;background-color:#0A4FE0;background-image:radial-gradient(700px 420px at 90% 0%,rgba(61,214,255,.45),rgba(61,214,255,0)),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(135deg,#0A3FC0,#1E6BFF);background-size:auto,56px 56px,56px 56px,auto;color:#fff">
+<section id="porque" class="sec-light" style="padding:120px 0">
   <div class="c">
-    <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#fff;opacity:.85">Por qué Ácumen</p>
-    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;max-width:760px">Experiencia que se nota.</h2>
+    <p class="mono eyebrow" data-rv="" style="margin:0 0 16px;font-size:13px;color:#fff;opacity:.85">Por qué Ácumen</p>
+    <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;">Experiencia que se nota.</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:28px;margin-top:56px">
       <sc-for list="{{cifras}}" as="f" hint-placeholder-count="4">
-        <div data-rv="" style="border-top:2px solid rgba(255,255,255,.55);padding-top:20px">
-          <div data-count="{{f.n}}" data-pre="+" style="font:800 clamp(48px,5.2vw,72px)/1 Montserrat,sans-serif;letter-spacing:-.04em;font-variant-numeric:tabular-nums">{{f.v}}</div>
-          <div style="margin-top:10px;font:600 17px/1.3 Montserrat,sans-serif">{{f.l}}</div>
+        <div data-rv="" style="border-top:2px solid rgba(10,79,224,.35);padding-top:20px">
+          <div data-count="{{f.n}}" data-pre="+" style="font:800 clamp(48px,5.2vw,72px)/1 Montserrat,sans-serif;letter-spacing:-.04em;font-variant-numeric:tabular-nums;color:#0A4FE0">{{f.v}}</div>
+          <div style="margin-top:10px;font:600 17px/1.3 Montserrat,sans-serif;color:#152943">{{f.l}}</div>
         </div>
       </sc-for>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px;margin-top:64px">
       <sc-for list="{{difs}}" as="d" hint-placeholder-count="4">
-        <div data-rv="" style="padding:24px;border-radius:18px;background:rgba(10,14,26,.38);border:1px solid rgba(255,255,255,.22)">
+        <div data-rv="" style="padding:24px;border-radius:18px;background:linear-gradient(135deg,#0A3FC0,#1E6BFF);border:0;color:#fff">
           <h3 style="margin:0 0 8px;font:700 18px/1.2 Montserrat,sans-serif">{{d.t}}</h3>
           <p style="margin:0;font-size:15.5px;color:#EAF1FF">{{d.d}}</p>
         </div>
@@ -413,9 +429,9 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============ PARTNERS ============ -->
-<section style="padding:100px 0 60px">
+<section class="bg-blue sec-blue" style="padding:110px 0">
   <div class="c">
-    <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Alianzas</p>
+    <p class="mono eyebrow" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Alianzas</p>
     <h2 data-rv="" style="margin:0;font:700 clamp(28px,3.2vw,40px)/1.1 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:700px">Los mejores aliados para cada solución.</h2>
     <div style="margin-top:56px">
       <sc-for list="{{partnersRows}}" as="r" hint-placeholder-count="2">
@@ -430,11 +446,11 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============ INSIGHTS ============ -->
-<section id="insights" style="padding:100px 0 120px">
+<section id="insights" style="padding:110px 0;background:#0A0E1A">
   <div class="c">
     <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
       <div>
-        <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Insights</p>
+        <p class="mono eyebrow" data-rv="" style="margin:0 0 16px;font-size:13px;color:#3DD6FF">Insights</p>
         <h2 data-rv="" style="margin:0;font:700 clamp(30px,3.6vw,48px)/1.08 Montserrat,sans-serif;letter-spacing:-.025em;color:#fff;max-width:720px">La tecnología cambia. La pregunta es cómo aprovecharla.</h2>
       </div>
       <a href="#insights" style="display:inline-flex;align-items:center;gap:8px;color:#8EE6FF;font:700 15px/1 Montserrat,sans-serif;min-height:44px">Todos los insights →</a>
@@ -452,30 +468,27 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============ CONTACTO ============ -->
-<section id="contacto" style="padding:20px 0 120px">
+<section id="contacto" class="sec-light" style="padding:110px 0">
   <div class="c">
-    <div data-rv="" style="display:flex;flex-wrap:wrap;gap:48px;padding:clamp(28px,5vw,64px);border-radius:32px;background-color:#0B4FE0;background-image:radial-gradient(520px 360px at 8% 0%,rgba(61,214,255,.5),rgba(61,214,255,0)),linear-gradient(135deg,#0A3FC0,#1E6BFF 70%)">
-      <div style="flex:1 1 360px;min-width:0">
-        <p class="mono" data-rv="" style="margin:0 0 16px;font-size:13px;color:#fff;opacity:.85">Conversemos</p>
-        <h2 data-rv="" style="margin:0;font:800 clamp(32px,4vw,54px)/1.05 Montserrat,sans-serif;letter-spacing:-.03em;color:#fff">Hablemos de lo que necesitas resolver.</h2>
-        <p style="margin:22px 0 0;color:#EAF1FF;font-size:18px;max-width:460px">Cuéntanos tu proyecto, tu infraestructura o el desafío que tienes enfrente. Un especialista te contacta para agendar la reunión.</p>
-        <p class="mono" style="margin:28px 0 0;font-size:12px;color:#fff;opacity:.85">Respuesta en 72hs</p>
+    <p class="mono eyebrow" data-rv="" style="margin:0 0 16px;font-size:13px;color:#003C90">Conversemos</p>
+    <h2 data-rv="" style="margin:0;font:800 clamp(32px,4vw,54px)/1.05 Montserrat,sans-serif;letter-spacing:-.03em;">Hablemos de lo que necesitas resolver.</h2>
+    <p class="intro" style="margin:22px 0 0;font-size:18px;">Cuéntanos tu proyecto, tu infraestructura o el desafío que tienes enfrente. Un especialista te contacta para agendar la reunión.</p>
+    <form style="margin-top:48px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px">
+        <div><label class="lbl" for="f-nombre">Nombre</label><input class="field" id="f-nombre" type="text" placeholder="Tu nombre"></div>
+        <div><label class="lbl" for="f-empresa">Empresa</label><input class="field" id="f-empresa" type="text" placeholder="Tu organización"></div>
       </div>
-      <form style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:16px;padding:28px;border-radius:22px;background:rgba(10,14,26,.78);border:1px solid rgba(147,178,220,.25)">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:16px">
-          <div><label class="lbl" for="f-nombre">Nombre</label><input class="field" id="f-nombre" type="text" placeholder="Tu nombre"></div>
-          <div><label class="lbl" for="f-empresa">Empresa</label><input class="field" id="f-empresa" type="text" placeholder="Tu organización"></div>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:16px">
-          <div><label class="lbl" for="f-correo">Correo</label><input class="field" id="f-correo" type="email" placeholder="nombre@empresa.com"></div>
-          <div><label class="lbl" for="f-tel">Teléfono (opcional)</label><input class="field" id="f-tel" type="tel" placeholder="55 0000 0000"></div>
-        </div>
-        <div><label class="lbl" for="f-centro">Centro de interés</label>
-          <select class="field" id="f-centro"><option>Redes y Comunicaciones</option><option>Espacios Inteligentes</option><option>Desarrollo</option><option>Ciberseguridad</option><option>Infraestructura</option><option>Gobierno</option><option>Aún no lo sé</option></select></div>
-        <div><label class="lbl" for="f-msg">¿Qué necesitas resolver?</label><textarea class="field" id="f-msg" rows="3" placeholder="Cuéntanos en pocas palabras"></textarea></div>
-        <button type="button" class="btn-amber" style="justify-content:center">Agenda una reunión</button>
-      </form>
-    </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px">
+        <div><label class="lbl" for="f-correo">Correo</label><input class="field" id="f-correo" type="email" placeholder="nombre@empresa.com"></div>
+        <div><label class="lbl" for="f-tel">Teléfono (opcional)</label><input class="field" id="f-tel" type="tel" placeholder="55 0000 0000"></div>
+      </div>
+      <div><label class="lbl" for="f-centro">Centro de interés</label>
+        <select class="field" id="f-centro"><option>Redes y Comunicaciones</option><option>Espacios Inteligentes</option><option>Desarrollo</option><option>Ciberseguridad</option><option>Infraestructura</option><option>Gobierno</option><option>Aún no lo sé</option></select></div>
+      <div><label class="lbl" for="f-msg">¿Qué necesitas resolver?</label><textarea class="field" id="f-msg" rows="4" placeholder="Cuéntanos en pocas palabras"></textarea></div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
+        <button type="button" class="btn-amber">Agenda una reunión</button>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -649,6 +662,9 @@ class Component extends DCLogic {
       hexStyle: "width:" + hw + "px;height:" + hh + "px",
       partnersRows: hexRows(logos(["HPE", "Alcatel", "ManageEngine", "Leviton", "Panduit", "Notifier", "Hikvision", "Fortinet", "Red Hat"])),
       clientesRows: hexRows(logos(["[Logo cliente 1]", "[Logo cliente 2]", "[Logo cliente 3]", "[Logo cliente 4]", "[Logo cliente 5]", "[Logo cliente 6]", "[Logo cliente 7]", "[Logo cliente 8]", "[Logo cliente 9]", "[Logo cliente 10]"])),
+      partners: logos(["HPE", "Alcatel", "ManageEngine", "Leviton", "Panduit", "Notifier", "Hikvision", "Fortinet", "Red Hat"]),
+      clientes: logos(["[Logo cliente 1]", "[Logo cliente 2]", "[Logo cliente 3]", "[Logo cliente 4]", "[Logo cliente 5]", "[Logo cliente 6]", "[Logo cliente 7]", "[Logo cliente 8]", "[Logo cliente 9]", "[Logo cliente 10]"]),
+      
       soluciones: [
         S("Redes y Comunicaciones", "Ácumen Opera", "Servicios de redes: diagnóstico inicial, visitas de servicio y control de cambios.", true),
         S("Redes y Comunicaciones", "Ácumen Enlaza", "Redes enterprise: levantamiento, diseño, obra y validación de entrega.", true),
